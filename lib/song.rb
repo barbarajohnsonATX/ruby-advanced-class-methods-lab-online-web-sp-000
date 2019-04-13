@@ -46,6 +46,7 @@ class Song
     title = artist_title[1].sub(".mp3", "")
     new_song = self.new
     new_song.artist_name = artist 
+    new_song.name = title 
     new_song
 
     
