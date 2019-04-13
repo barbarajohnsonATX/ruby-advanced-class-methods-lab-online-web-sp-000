@@ -8,7 +8,7 @@ class Song
   
   def self.create 
     new_song = self.new 
-    self.all << new_song 
+    @@all << new_song 
     new_song
   end 
   
@@ -40,7 +40,7 @@ class Song
   
   
   def self.alphabetical 
-    self.all.sort_by {|obj| obj.name}
+    @all.sort_by {|obj| obj.name}
   end 
   
   
@@ -56,13 +56,13 @@ class Song
   
   def self.create_from_filename(filename)
     new_song = self.new_from_filename(filename)
-    self.all << new_song
+    @all << new_song
   end 
   
 
 
   def self.destroy_all
-   self.all = []
+   @all = []
   end 
   
   def save
