@@ -35,7 +35,7 @@ class Song
   end 
   
   def self.alphabetical 
-    sorted = @@all.each {|song| song.name
+  @@all.sort_by {|obj| obj.attribute}
   end 
   
   def self.all
