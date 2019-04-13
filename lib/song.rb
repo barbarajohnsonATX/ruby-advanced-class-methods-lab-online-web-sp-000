@@ -4,6 +4,7 @@ class Song
 
   def create 
     new_song = Song.new 
+    new_song.save 
   end 
   
 
