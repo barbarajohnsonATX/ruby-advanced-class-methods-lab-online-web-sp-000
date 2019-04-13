@@ -31,8 +31,11 @@ class Song
       return found
     else 
       new_song = self.create_by_name(song_name)
-      
     end 
+  end 
+  
+  def self.alphabetical 
+    sorted = @@all.each {|song| song.name
   end 
   
   def self.all
