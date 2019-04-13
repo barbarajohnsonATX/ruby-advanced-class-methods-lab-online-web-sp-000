@@ -8,8 +8,6 @@ class Song
     new_song
   end 
   
- 
-  
   def self.new_by_name(song_name)
     new_song = self.new 
     new_song.name = song_name 
@@ -20,6 +18,10 @@ class Song
     new_song = self.create
     new_song.name = song_name
     new_song
+  end 
+  
+  def self.find_by_name(song_name)
+    @@all.each {|s| if s.name == song_name return s}
   end 
   
   def self.all
