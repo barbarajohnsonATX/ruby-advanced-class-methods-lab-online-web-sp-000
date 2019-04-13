@@ -34,8 +34,13 @@ class Song
     end 
   end 
   
+  
   def self.alphabetical 
-  @@all.sort_by {|obj| obj.name}
+    @@all.sort_by {|obj| obj.name}
+  end 
+  
+  def self.create_from_filename(filename)
+    song 
   end 
   
   def self.all
